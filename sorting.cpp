@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include<map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -43,44 +45,71 @@ using namespace std;
 // }
 
 //  quick sort  
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high]; // last element ko pivot ke roop me lete ha
-    int i = (low - 1);    //  smaller element ka index
+// int partition(int arr[], int low, int high) {
+//     int pivot = arr[high]; // last element ko pivot ke roop me lete ha
+//     int i = (low - 1);    //  smaller element ka index
 
-    for (int j = low; j < high; j++) {
-        // agar current element pivot se chhota ya barabar hai to usse swap karo
-        if (arr[j] <= pivot) {
-            i++; 
-            swap(arr[i], arr[j]);
-        }
-    }
-    // Pivot swap
-    swap(arr[i + 1], arr[high]);
-    return (i + 1); // Pivot right position return karo
-}
+//     for (int j = low; j < high; j++) {
+//         // agar current element pivot se chhota ya barabar hai to usse swap karo
+//         if (arr[j] <= pivot) {
+//             i++; 
+//             swap(arr[i], arr[j]);
+//         }
+//     }
+//     // Pivot swap
+//     swap(arr[i + 1], arr[high]);
+//     return (i + 1); // Pivot right position return karo
+// }
 
-// main function for quick sort
-void quickSort(int arr[], int low, int high) {
-    if (low < high) {
-        // p ko partition karke pivot ka sahi index return karo
-        int p = partition(arr, low, high);
+// // main function for quick sort
+// void quickSort(int arr[], int low, int high) {
+//     if (low < high) {
+//         // p ko partition karke pivot ka sahi index return karo
+//         int p = partition(arr, low, high);
 
-        // Pivot ke left aur right sub-arrays ko recursively sort karo
-        quickSort(arr, low, p - 1);
-        quickSort(arr, p + 1, high);
-    }
-}
-// tc O(n log n) and sc O(log n) for quick sort
-
-
+//         // Pivot ke left aur right sub-arrays ko recursively sort karo
+//         quickSort(arr, low, p - 1);
+//         quickSort(arr, p + 1, high);
+//     }
+// }
+// // tc O(n log n) and sc O(log n) for quick sort
 
 
 
-int main()
+// bool isSorted(const vector<int>& arr) {
+//     for (size_t i = 1; i < arr.size(); ++i) {
+//         if (arr[i] < arr[i - 1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+vector<int> twoSum(vector<int>& nums, int target)
 {
-    vector<int> arr = {2, 1, 4, 3, 5, 8, 7};
-    quickSort(&arr[0], 0, arr.size() - 1 );
-    for (int x : arr)
-        cout << x << " ";
+    unordered_map<int, int> numMap; // Map to store numbers and their indices
+
+    for (int i = 0; i < nums.size(); ++i) {
+        int complement = target - nums[i]; // Calculate the complement
+        if (numMap.find(complement) != numMap.end()) {
+            // If the complement exists in the map, return the indices
+            return {numMap[complement], i};
+        }
+        // Store the current number and its index in the map
+        numMap[nums[i]] = i;
+    }
+    return {}; // Return an empty vector if no solution is found
+}
+
+int main() {
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+    vector<int> result = twoSum(nums, target);
+
+    if (!result.empty()) {
+        cout << "Indices: " << result[0] << ", " << result[1] << endl;
+    } else {
+        cout << "No solution found." << endl;
+    }
+
     return 0;
 }
