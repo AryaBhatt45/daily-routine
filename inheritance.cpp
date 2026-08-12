@@ -69,40 +69,70 @@
 
 using namespace std;
 
-class grandFather {
+// class grandFather {
+//     public:
+//     void House(){
+//         cout<<"Dadu have house "<<endl;
+
+//     } 
+// };
+
+// class Father{
+//     public:
+//     void Car() {
+//         cout <<"Father have car"<<endl;
+
+//     }
+
+// };
+
+// class Son : public grandFather, public Father {
+//     public:
+//     void myBike(){
+//         cout<<"I have bike "<< endl;
+//     }
+// };
+
+// int main (){
+//     Son myObj;
+//     myObj.House();
+//     myObj.Car();
+//     myObj.myBike();
+
+//     return 0;
+
+
+
+// }
+class grnadParent {
     public:
-    void House(){
-        cout<<"Dadu have house "<<endl;
-
-    } 
-};
-
-class Father{
-    public:
-    void Car() {
-        cout <<"Father have car"<<endl;
-
+    int a=10;
+    void display(){
+        cout<<"grandparent class"<<endl;
     }
-
 };
-
-class Son : public grandFather, public Father {
+class parent : public grnadParent {
     public:
-    void myBike(){
-        cout<<"I have bike "<< endl;
-    }
+    int b=20;
+    // void display(){
+    //     cout<<"parent class"<<endl;
+    // }
 };
 
-int main (){
-    Son myObj;
-    myObj.House();
-    myObj.Car();
-    myObj.myBike();
+class  child : public parent {
+    public:
+    int c=30;
+    // void show(){
+    //     cout<<"child class"<<endl;
+    // }
+};
+
+int main(){
+    child obj;
+    obj.display();
+    
+    cout<<obj.a<<endl<<obj.b<<endl<<obj.c<<endl;
+    
 
     return 0;
-
-
-
 }
-
-
