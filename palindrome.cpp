@@ -37,3 +37,31 @@ class Solution {
     
 //     return 0;
 // }
+
+bool isPalindrome(int n) {
+    int original = n;
+    int rev=0;
+     
+    while(n>0){
+        int digit=n%10;
+        rev=rev*10+digit;
+        n=n/10;
+        
+    }
+    return original==rev;
+
+}
+
+ int main() {
+    int n;
+    cout<<" Enter a Number :";
+    cin>>n;
+    
+    if(isPalindrome(n)) {
+        cout<<"Palindrome" <<endl;
+
+    } else {
+        cout<<" Not a Palindrome " << endl;
+    }
+     return 0;
+ }

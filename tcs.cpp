@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// Pure Simple Logic: Har step par check karo konse color ki ball rakh sakte hain
 int countWays(int g, int y, int r, char lastBall) {
-    // Agar saari balls khatam ho gayi, to 1 valid rasta mil gaya
+
     if (g == 0 && y == 0 && r == 0) return 1;
 
     int total = 0;
@@ -27,3 +26,4 @@ int main() {
 
     return 0;
 }
+
