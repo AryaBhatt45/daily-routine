@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Coder - Beyond Imagination Anime Login ⚡</title>
+    <style>
+        /* ==================== 1. CYBERPUNK ANIME THEME SETUP ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0a0a12; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Moving Cyber Grid Line Background */
+        .cyber-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(0, 223, 216, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 127, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: rotateX(60deg) translateY(-20%);
+            animation: gridScroll 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes gridScroll {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 800px; }
+        }
+
+        /* Glow Orbs reflecting anime aura energy */
+        .aura-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 2;
+            animation: auraPulse 8s ease-in-out infinite alternate;
+        }
+        .aura-pink { width: 500px; height: 500px; background: rgba(255, 0, 127, 0.2); top: -10%; right: -10%; }
+        .aura-cyan { width: 450px; height: 450px; background: rgba(0, 223, 216, 0.15); bottom: -10%; left: -10%; animation-delay: -4s; }
+
+        /* ==================== 2. FUTURE GLASSMORPHISM LOGIN CARD ==================== */
+        .login-container {
+            position: relative;
+            z-index: 10;
+            width: 420px;
+            padding: 50px 40px;
+            background: rgba(10, 10, 18, 0.6);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 2px solid rgba(0, 223, 216, 0.2);
+            border-radius: 24px;
+            box-shadow: 0 0 40px rgba(0, 223, 216, 0.1), inset 0 0 20px rgba(255, 0, 127, 0.05);
+            text-align: center;
+            overflow: hidden;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        /* Card border glows on hover */
+        .login-container:hover {
+            border-color: rgba(255, 0, 127, 0.5);
+            box-shadow: 0 0 50px rgba(255, 0, 127, 0.2);
+        }
+
+        /* Neon Corner Accents like an Anime Mech HUD Interface */
+        .login-container::before, .login-container::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #00dfd8;
+        }
+        .login-container::before { top: 15px; left: 15px; border-right: none; border-bottom: none; }
+        .login-container::after { bottom: 15px; right: 15px; border-left: none; border-top: none; }
+
+        /* Tech Header Style */
+        .brand-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px #00dfd8);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .login-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .login-subtitle {
+            color: #00dfd8;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        /* ==================== 3. SCI-FI INPUT FIELDS ==================== */
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            outline: none;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        /* Custom underline glow activation */
+        .input-group input:focus {
+            border-color: #00dfd8;
+            background: rgba(0, 223, 216, 0.02);
+            box-shadow: 0 0 15px rgba(0, 223, 216, 0.2);
+        }
+
+        /* Floating Futuristic Label */
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        /* Label logic when active or typing */
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: #00dfd8;
+            background: #0a0a12;
+            padding: 0 8px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Password specific custom accent */
+        .input-group-pass input:focus {
+            border-color: #ff007f;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+        }
+        .input-group-pass input:focus ~ label,
+        .input-group-pass input:valid ~ label {
+            color: #ff007f;
+        }
+
+        /* ==================== 4. ANIME MECHANICAL BUTTON ==================== */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid #00dfd8;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 15px rgba(0, 223, 216, 0.1);
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 223, 216, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #00dfd8;
+            color: #000;
+            box-shadow: 0 0 30px rgba(0, 223, 216, 0.6);
+            font-weight: 800;
+        }
+
+        /* Custom utilities */
+        .links-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .links-area a {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links-area a:hover {
+            color: #ff007f;
+        }
+
+        /* Background Particle Element via JS */
+        .sparkle-particle {
+            position: absolute;
+            pointer-events: none;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: particleRise 6s infinite linear;
+            z-index: 3;
+        }
+
+        /* Animations */
+        @keyframes auraPulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(20px, 20px); }
+        }
+
+        @keyframes particleRise {
+            0% { transform: translateY(110vh) scale(0); opacity: 0; }
+            50% { opacity: 0.7; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+    <div class="aura-orb aura-pink"></div>
+    <div class="aura-orb aura-cyan"></div>
+
+    <div class="login-container">
+        <div class="brand-icon">⚡</div>
+        <h1 class="login-title">NEXUS ID</h1>
+        <p class="login-subtitle">Desi Coder Protocol</p>
+
+        <form autocomplete="off" onsubmit="event.preventDefault(); triggerAccessGranted();">
+            <div class="input-group">
+                <input type="text" id="username" required>
+                <label for="username">Pilot Code / Email</label>
+            </div>
+
+            <div class="input-group input-group-pass">
+                <input type="password" id="password" required>
+                <label for="password">Security Key</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Initialize Sync</button>
+        </form>
+
+        <div class="links-area">
+            <a href="#">Forgot Cipher?</a>
+            <a href="#">Create Core Profile</a>
+        </div>
+    </div>
+
+    <script>
+        function spawnSparkles() {
+            const particleCount = 25;
+            for(let i=0; i < particleCount; i++) {
+                createSparkle();
+            }
+        }
+
+        function createSparkle() {
+            const p = document.createElement('div');
+            p.classList.add('sparkle-particle');
+            
+            const size = Math.random() * 4 + 1;
+            p.style.width = `${size}px`;
+            p.style.height = `${size}px`;
+            
+            const particleColors = ['#00dfd8', '#ff007f', '#ffffff', '#7928ca'];
+            p.style.background = particleColors[Math.floor(Math.random() * particleColors.length)];
+            
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.animationDuration = Math.random() * 4 + 4 + 's';
+            p.style.animationDelay = Math.random() * 5 + 's';
+            
+            if(size > 2.5) {
+                p.style.boxShadow = `0 0 10px ${p.style.background}`;
+            }
+
+            document.body.appendChild(p);
+        }
+
+        function triggerAccessGranted() {
+            const container = document.querySelector('.login-container');
+            const subBtn = document.querySelector('.submit-btn');
+            
+            subBtn.innerText = "ACCESS GRANTED";
+            subBtn.style.background = "#ff007f";
+            subBtn.style.borderColor = "#ff007f";
+            subBtn.style.boxShadow = "0 0 30px #ff007f";
+            subBtn.style.color = "#fff";
+            
+            container.style.borderColor = "#ff007f";
+            container.style.boxShadow = "0 0 60px rgba(255, 0, 127, 0.4)";
+            
+            console.log("Core System Sync Activated Successfully! 🚀");
+        }
+
+        spawnSparkles();
+    </script>
+</body>
+</html>
