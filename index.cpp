@@ -23,7 +23,7 @@ int smallestIndex(vector<int> &nums)
 
 int main()
 {
-    vector<int> arr = {4, 5, 2, 3, 1};
+    vector<int> arr = {1, 2, 3,4};
 
     int max = smallestIndex(arr);
     cout << "The  max : " << max;
